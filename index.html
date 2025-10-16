@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 1 - FIS 1200 M</title>
+  <link rel="stylesheet" href="static/css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>Proyecto N° 1 - Física: Fenómenos Electrostáticos</h1>
+    <p>Aplicación interactiva: Fuerza, Campo, Potencial y Ley de Gauss</p>
+  </header>
+
+  <main>
+    <!-- Fuerza Eléctrica -->
+    <section class="card">
+      <h2>⚡ Fuerza Eléctrica (Ley de Coulomb)</h2>
+      <p>F = k * (q₁ * q₂) / r²</p>
+
+      <div class="modo">
+        <label>Modo:</label>
+        <select id="modoFuerza" onchange="toggleFuerzaModo()">
+          <option value="escalar">Escalar</option>
+          <option value="vectorial">Vectorial</option>
+        </select>
+      </div>
+
+      <div id="fuerzaEscalar">
+        <label for="q1">Carga q₁ (C):</label>
+        <input type="number" id="q1" step="any">
+        <label for="q2">Carga q₂ (C):</label>
+        <input type="number" id="q2" step="any">
+        <label for="r">Distancia r (m):</label>
+        <input type="number" id="r" step="any">
+      </div>
+
+      <div id="fuerzaVectorial" class="oculto">
+        <h3>Coordenadas (m)</h3>
+        <label>x₁:</label><input type="number" id="x1" step="any">
+        <label>y₁:</label><input type="number" id="y1" step="any">
+        <label>z₁:</label><input type="number" id="z1" step="any">
+        <label>x₂:</label><input type="number" id="x2" step="any">
+        <label>y₂:</label><input type="number" id="y2" step="any">
+        <label>z₂:</label><input type="number" id="z2" step="any">
+        <label>q₁ (C):</label><input type="number" id="q1v" step="any">
+        <label>q₂ (C):</label><input type="number" id="q2v" step="any">
+      </div>
+
+      <button onclick="calcularFuerza()">Calcular</button>
+      <p id="resultadoFuerza"></p>
+      <p id="vectorFuerza"></p>
+    </section>
+
+    <!-- Campo Eléctrico -->
+    <section class="card">
+      <h2>🌌 Campo Eléctrico</h2>
+      <p>E = k * q / r²</p>
+
+      <div class="modo">
+        <label>Modo:</label>
+        <select id="modoCampo" onchange="toggleCampoModo()">
+          <option value="escalar">Escalar</option>
+          <option value="vectorial">Vectorial</option>
+        </select>
+      </div>
+
+      <div id="campoEscalar">
+        <label for="qCampo">Carga q (C):</label>
+        <input type="number" id="qCampo" step="any">
+        <label for="rCampo">Distancia r (m):</label>
+        <input type="number" id="rCampo" step="any">
+      </div>
+
+      <div id="campoVectorial" class="oculto">
+        <h3>Coordenadas (m)</h3>
+        <label>xq:</label><input type="number" id="xq" step="any">
+        <label>yq:</label><input type="number" id="yq" step="any">
+        <label>zq:</label><input type="number" id="zq" step="any">
+        <label>xp:</label><input type="number" id="xp" step="any">
+        <label>yp:</label><input type="number" id="yp" step="any">
+        <label>zp:</label><input type="number" id="zp" step="any">
+        <label>q (C):</label><input type="number" id="qVec" step="any">
+      </div>
+
+      <button onclick="calcularCampo()">Calcular</button>
+      <p id="resultadoCampo"></p>
+      <p id="vectorCampo"></p>
+    </section>
+
+    <!-- Potencial Eléctrico -->
+    <section class="card">
+      <h2>🔋 Potencial Eléctrico</h2>
+      <p>V = k * q / r</p>
+      <label for="qPotencial">Carga q (C):</label>
+      <input type="number" id="qPotencial" step="any">
+      <label for="rPotencial">Distancia r (m):</label>
+      <input type="number" id="rPotencial" step="any">
+      <button onclick="calcularPotencial()">Calcular</button>
+      <p id="resultadoPotencial"></p>
+    </section>
+
+    <!-- Ley de Gauss -->
+    <section class="card">
+      <h2>🌀 Ley de Gauss</h2>
+      <p>Φ = Q / ε₀</p>
+      <label for="qGauss">Carga encerrada Q (C):</label>
+      <input type="number" id="qGauss" step="any">
+      <button onclick="calcularGauss()">Calcular</button>
+      <p id="resultadoGauss"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Nombre: Beltrán Canaza Alan Joseph — CI: 7351421</p>
+    <p>Ingeniería Informática - FIS 1200 M © 2025</p>
+  </footer>
+
+  <script src="static/js/calculos.js"></script>
+</body>
+</html>

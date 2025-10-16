@@ -1,0 +1,83 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #003366, #0099cc);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 2em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 90%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #00ccff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #003366;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0099cc;
+  color: white;
+}
+
+p#resultadoFuerza, p#resultadoCampo, p#resultadoPotencial, p#resultadoGauss {
+  margin-top: 15px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.oculto { display: none; }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9em;
+}
